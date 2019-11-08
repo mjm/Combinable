@@ -3,7 +3,7 @@
 import UIKit
 
 extension CellIdentifier where CellType == UITableViewCell {
-    func register(with tableView: UITableView) {
+    public func register(with tableView: UITableView) {
         switch cellType {
         case let .class(cellClass):
             tableView.register(cellClass, forCellReuseIdentifier: rawValue)
@@ -16,7 +16,7 @@ extension CellIdentifier where CellType == UITableViewCell {
 }
 
 extension CellIdentifier where CellType == UICollectionViewCell {
-    func register(with collectionView: UICollectionView) {
+    public func register(with collectionView: UICollectionView) {
         switch cellType {
         case let .class(cellClass):
             collectionView.register(cellClass, forCellWithReuseIdentifier: rawValue)
