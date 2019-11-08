@@ -2,7 +2,11 @@ import Combinable
 
 // NSDiffableDataSourceSnapshot exists in one of these two frameworks
 #if canImport(AppKit)
+#if targetEnvironment(macCatalyst)
+import UIKit
+#else
 import AppKit
+#endif
 #elseif canImport(UIKit)
 import UIKit
 #endif
