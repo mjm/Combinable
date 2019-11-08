@@ -3,7 +3,7 @@
 import Combine
 import UIKit
 
-public class CombinableTableViewCell: UITableViewCell {
+open class CombinableTableViewCell: UITableViewCell {
     @Published var _selected: Bool = false
     @Published var _highlighted: Bool = false
 
@@ -25,7 +25,7 @@ public class CombinableTableViewCell: UITableViewCell {
         _highlighted = highlighted
     }
 
-    public override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
 
         cancellables.removeAll()
