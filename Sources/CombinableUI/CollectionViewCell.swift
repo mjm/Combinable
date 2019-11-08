@@ -3,10 +3,10 @@
 import Combine
 import UIKit
 
-class CombinableCollectionViewCell: UICollectionViewCell {
-    var cancellables = Set<AnyCancellable>()
+public class CombinableCollectionViewCell: UICollectionViewCell {
+    public var cancellables = Set<AnyCancellable>()
 
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
 
         cancellables.removeAll()

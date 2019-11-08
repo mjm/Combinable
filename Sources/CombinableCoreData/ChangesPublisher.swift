@@ -2,6 +2,14 @@ import Combine
 import CoreData
 
 public extension NSManagedObjectContext {
+    /// Publishes lists of changes to the results of a fetch request.
+    ///
+    /// - Parameters:
+    ///    - fetchRequest: The fetch request to observe and publish changes for.
+    ///
+    /// - Returns: A publisher that observes the fetch request for changes in the collection of objects it matches
+    ///   and publishes those changes.
+    ///
     func changesPublisher<Object: NSManagedObject>(for fetchRequest: NSFetchRequest<Object>)
         -> ManagedObjectChangesPublisher<Object>
     {

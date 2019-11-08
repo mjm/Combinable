@@ -1,0 +1,215 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/BindableCell.swift",
+      "line": 1,
+      "symbol": "BindableCell",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/BindableCell.swift",
+      "line": 2,
+      "symbol": "BindableCell.bind(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 11,
+      "symbol": "DiffableSnapshotApplying",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 12,
+      "symbol": "DiffableSnapshotApplying.SectionIdentifierType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 13,
+      "symbol": "DiffableSnapshotApplying.ItemIdentifierType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 15,
+      "symbol": "DiffableSnapshotApplying.cancellables",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 17,
+      "symbol": "DiffableSnapshotApplying.apply(_:animatingDifferences:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 24,
+      "symbol": "DiffableSnapshotApplying",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 25,
+      "symbol": "DiffableSnapshotApplying.SnapshotType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 27,
+      "symbol": "DiffableSnapshotApplying.bound(to:animate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 47,
+      "symbol": "DiffableSnapshotApplying.bound(to:animate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
+      "line": 64,
+      "symbol": "DiffableSnapshotApplying.bound(to:animate:on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 1,
+      "symbol": "ReusableCell",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 2,
+      "symbol": "ReusableCell.Identifier",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 4,
+      "symbol": "ReusableCell.cellIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 6,
+      "symbol": "ReusableCell.allCellIdentifiers",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 9,
+      "symbol": "ReusableCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 10,
+      "symbol": "ReusableCell.register(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 17,
+      "symbol": "ReusableCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 18,
+      "symbol": "ReusableCell.allCellIdentifiers",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 23,
+      "symbol": "CellIdentifier",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 24,
+      "symbol": "CellIdentifier.CellType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 26,
+      "symbol": "CellIdentifier.cellType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 27,
+      "symbol": "CellIdentifier.register(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 30,
+      "symbol": "RegisteredCellType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 31,
+      "symbol": "RegisteredCellType.class(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 32,
+      "symbol": "RegisteredCellType.nib(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 33,
+      "symbol": "RegisteredCellType.storyboard",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 36,
+      "symbol": "Cell",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell.swift",
+      "line": 37,
+      "symbol": "Cell.View",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/matt/Projects/Combinable"
+}

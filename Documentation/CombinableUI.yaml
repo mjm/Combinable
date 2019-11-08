@@ -1,0 +1,35 @@
+module: CombinableUI
+output: ../docs/CombinableUI
+author: Matt Moriarity
+author_url: https://www.mattmoriarity.com/
+github_url: https://github.com/mjm/Combinable
+
+swift_build_tool: spm
+swift_version: '5.1.2'
+
+theme: fullwidth
+
+readme: CombinableUI/README.md
+abstract: CombinableUI/Sections/*.md
+
+custom_categories:
+- name: Creating Data Sources
+  children:
+  - CombinableTableViewDataSource
+  - CombinableCollectionViewDataSource
+  - DiffableSnapshotApplying
+
+- name: Defining Cell Content
+  children:
+  - ReusableCell
+  - BindableCell
+  - CellIdentifier
+  - RegisteredCellType
+  - Cell
+
+- name: Creating Cell Views
+  children:
+  - CombinableTableViewCell
+  - CombinableCollectionViewCell
+  - UITableViewCell
+  - UICollectionViewCell

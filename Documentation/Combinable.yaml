@@ -1,0 +1,13 @@
+module: Combinable
+output: ../docs/Combinable
+author: Matt Moriarity
+author_url: https://www.mattmoriarity.com/
+github_url: https://github.com/mjm/Combinable
+
+swift_build_tool: spm
+swift_version: '5.1.2'
+
+theme: fullwidth
+
+readme: Combinable/README.md
+abstract: Combinable/Sections/*.md

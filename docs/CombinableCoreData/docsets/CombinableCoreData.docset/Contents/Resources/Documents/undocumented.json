@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableCoreData/ChangesPublisher.swift",
+      "line": 20,
+      "symbol": "ManagedObjectChangesPublisher",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableCoreData/ChangesPublisher.swift",
+      "line": 27,
+      "symbol": "ManagedObjectChangesPublisher.init(fetchRequest:context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/matt/Projects/Combinable"
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Publisher Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Extension/Publisher" class="dashAnchor"></a>
+
+    <a title="Publisher Extension Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Combinable Docs
+        </a>
+         (85% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/mjm/Combinable">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Combinable Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Publisher Extension Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Publisher.html">Publisher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/WithLatestFrom.html">WithLatestFrom</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Publisher</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="kt">OSX</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Publisher</span></code></pre>
+
+                </div>
+              </div>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10CombinableE15applyingChangesyAA03AnyB0Vy6OutputQz7FailureQzGqd___AH_7ElementQZqd_0_ctAaBRd__AJQyd__AKRSSmAIRQs20CollectionDifferenceVyqd_0_GAHRtd__SiAH_5IndexRTzr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/applyingChanges(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10CombinableE15applyingChangesyAA03AnyB0Vy6OutputQz7FailureQzGqd___AH_7ElementQZqd_0_ctAaBRd__AJQyd__AKRSSmAIRQs20CollectionDifferenceVyqd_0_GAHRtd__SiAH_5IndexRTzr0_lF">applyingChanges(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Modifies the collections in the output by applying lists of changes from another publisher.</p>
+
+<p>This is most useful when the publisher feeds this result back into itself, so that the next element in the stream
+is the result of applying the last collection of changes.</p>
+
+<p>Use the <code>transform</code> closure to produce a collection of elements parallel to the elements in the collection
+producing the changes. The benefit of doing this instead of just mapping over the collection is that you only
+create new elements when they were inserted in the original list: otherwise, the value remains the same.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">applyingChanges</span><span class="o">&lt;</span><span class="kt">Changes</span><span class="p">:</span> <span class="kt">Publisher</span><span class="p">,</span> <span class="kt">ChangeItem</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">changes</span><span class="p">:</span> <span class="kt">Changes</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ChangeItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Output</span><span class="o">.</span><span class="kt">Element</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span>
+<span class="k">where</span> <span class="kt">Output</span><span class="p">:</span> <span class="kt">RangeReplaceableCollection</span><span class="p">,</span>
+    <span class="kt">Output</span><span class="o">.</span><span class="kt">Index</span> <span class="o">==</span> <span class="kt">Int</span><span class="p">,</span>
+    <span class="kt">Changes</span><span class="o">.</span><span class="kt">Output</span> <span class="o">==</span> <span class="kt">CollectionDifference</span><span class="o">&lt;</span><span class="kt">ChangeItem</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="kt">Changes</span><span class="o">.</span><span class="kt">Failure</span> <span class="o">==</span> <span class="kt">Failure</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>changes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A publisher that emits collections of changes that should be applied to the collections
+that this publisher produces. The type of element for the changes can be different than the elements
+in those collections.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transform</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that is called on each inserted element found in <code>changes</code> that transforms
+it into the element that will inserted into the collections emitted by the returned publisher.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new publisher that emits the collections from this publisher with the changes applied.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10Combinables5NeverO7FailureRtzrlE6assign2to2on4weakAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__SbtRld__ClF"></a>
+                    <a name="//apple_ref/swift/Method/assign(to:on:weak:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10Combinables5NeverO7FailureRtzrlE6assign2to2on4weakAA14AnyCancellableCs24ReferenceWritableKeyPathCyqd__6OutputQzG_qd__SbtRld__ClF">assign(to:on:weak:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Assign the output to a property of an object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">assign</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">to</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">ReferenceWritableKeyPath</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Output</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">on</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Root</span><span class="p">,</span>
+    <span class="nv">weak</span><span class="p">:</span> <span class="kt">Bool</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyCancellable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A key path indicating the property to assign.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object that contains the property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>weak</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to hold <code>object</code> weakly or not. Use this to avoid cycles.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A subscriber that assigns the value to the property.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10CombinableE6handle17receiveCompletion0E5ValueyyAA11SubscribersO0F0Oy_7FailureQzGc_y6OutputQzctF"></a>
+                    <a name="//apple_ref/swift/Method/handle(receiveCompletion:receiveValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10CombinableE6handle17receiveCompletion0E5ValueyyAA11SubscribersO0F0Oy_7FailureQzGc_y6OutputQzctF">handle(receiveCompletion:receiveValue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A variant of sink that keeps the subscription alive until it completes.</p>
+
+<p>Use this for publishers that are known to complete at some point in the near future when there is no appropriate
+place to store the subscription. Using this with a publisher that doesn&rsquo;t complete will cause a memory leak.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handle</span><span class="p">(</span>
+    <span class="nv">receiveCompletion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Subscribers</span><span class="o">.</span><span class="kt">Completion</span><span class="o">&lt;</span><span class="kt">Failure</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+    <span class="nv">receiveValue</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Output</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>receiveCompletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to execute on completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>receiveValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to execute on receipt of a value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10Combinables5NeverO7FailureRtzrlE6handle12receiveValueyy6OutputQzc_tF"></a>
+                    <a name="//apple_ref/swift/Method/handle(receiveValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10Combinables5NeverO7FailureRtzrlE6handle12receiveValueyy6OutputQzc_tF">handle(receiveValue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A variant of sink that keeps the subscription alive until it completes.</p>
+
+<p>Use this for publishers that are known to complete at some point in the near future when there is no appropriate
+place to store the subscription. Using this with a publisher that doesn&rsquo;t complete will cause a memory leak.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handle</span><span class="p">(</span><span class="nv">receiveValue</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Output</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>receiveValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to execute on receipt of a value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10CombinableE11ignoreErrorAA10PublishersO5CatchVy_xAA5EmptyVy6OutputQzs5NeverOGGyF"></a>
+                    <a name="//apple_ref/swift/Method/ignoreError()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10CombinableE11ignoreErrorAA10PublishersO5CatchVy_xAA5EmptyVy6OutputQzs5NeverOGGyF">ignoreError()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Swallow errors, completing the stream immediately.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">ignoreError</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Publishers</span><span class="o">.</span><span class="kt">Catch</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Empty</span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">,</span> <span class="kt">Never</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10CombinableSb6OutputRtzrlE6invertAA03AnyB0VySb7FailureQzGyF"></a>
+                    <a name="//apple_ref/swift/Method/invert()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10CombinableSb6OutputRtzrlE6invertAA03AnyB0VySb7FailureQzGyF">invert()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inverts boolean values in the stream.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">invert</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">.</span><span class="kt">Output</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Failure</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10CombinableE10optionallyAA03AnyB0Vy6OutputQzSg7FailureQzGyF"></a>
+                    <a name="//apple_ref/swift/Method/optionally()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10CombinableE10optionallyAA03AnyB0Vy6OutputQzSg7FailureQzGyF">optionally()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Transform the stream into one that produces optional values of the same time.</p>
+
+<p>This allows you to use a stream that produces non-optional values with a subscriber that is expecting optionals.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">optionally</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="k">Self</span><span class="o">.</span><span class="kt">Output</span><span class="p">?,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Failure</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Combine9PublisherP10CombinableE14withLatestFromyAD04WitheF0Vyxqd__Gqd__AaBRd__7FailureQyd__AIRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/withLatestFrom(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Combine9PublisherP10CombinableE14withLatestFromyAD04WitheF0Vyxqd__Gqd__AaBRd__7FailureQyd__AIRtzlF">withLatestFrom(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">withLatestFrom</span><span class="o">&lt;</span><span class="kt">P</span><span class="p">:</span> <span class="kt">Publisher</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">P</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/WithLatestFrom.html">WithLatestFrom</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">P</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Failure</span> <span class="o">==</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Failure</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://www.mattmoriarity.com/" target="_blank" rel="external">Matt Moriarity</a>. All rights reserved. (Last updated: 2019-11-07)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
