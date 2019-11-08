@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           CombinableUI Docs
         </a>
-         (0% documented)
+         (15% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -108,7 +108,40 @@
         <section class="section">
           <div class="section-content">
             <h1>CombinableTableViewDataSource</h1>
-            
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CombinableTableViewDataSource</span><span class="o">&lt;</span>
+    <span class="kt">SectionIdentifierType</span><span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span>
+    <span class="kt">ItemIdentifierType</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ReusableCell.html">ReusableCell</a></span>
+<span class="o">&gt;</span><span class="p">:</span> <span class="kt">UITableViewDiffableDataSource</span><span class="o">&lt;</span>
+    <span class="kt">SectionIdentifierType</span><span class="p">,</span>
+    <span class="kt">ItemIdentifierType</span>
+<span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="../Protocols/DiffableSnapshotApplying.html">DiffableSnapshotApplying</a></span>
+<span class="k">where</span> <span class="kt">ItemIdentifierType</span><span class="o">.</span><span class="kt">Identifier</span><span class="o">.</span><span class="kt">CellType</span> <span class="o">==</span> <span class="kt">UITableViewCell</span></code></pre>
+
+                </div>
+              </div>
+            <p>A diffable data source that supports binding to a publisher of snapshots.</p>
+
+<p>The items in the data source snapshots must conform to <code><a href="../Protocols/ReusableCell.html">ReusableCell</a></code> which allows some
+conveniences:</p>
+
+<ul>
+<li>The data source can ask the items which cell identifier they use, and dequeue a cell for them.</li>
+<li>Any NIBs or cell classes used by the items will be registered automatically with the table view.</li>
+</ul>
+
+<p>This data source also supports some features of <code>UITableViewDataSource</code> that the built-in
+<code>UITableViewDiffableDataSource</code> doesn&rsquo;t:</p>
+<li>Indicating which rows can be edited. See <code>editable(_:)</code>.</li>
+<li><p>Providing titles for the sections in the table view. See <code>titled(_:)</code>.</p></li>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Protocols/DiffableSnapshotApplying.html">DiffableSnapshotApplying</a></code>, which provides methods to bind a publisher
+of snapshots to the data source.</p>
+
+</div>
+
           </div>
         </section>
 
@@ -119,27 +152,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/cancellables" class="dashAnchor"></a>
-                    <a class="token" href="#/">cancellables</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC_13configureCellACyxq_GSo07UITableD0C_ySo0idH0C_q_tctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(_:configureCell:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">init(_:configureCell:)</a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC_13configureCellACyxq_GSo07UITableD0C_ySo0idH0C_q_tctcfc">init(_:configureCell:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -147,7 +162,76 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Create a new data source for a table view, populating cells with a block.</p>
+
+<p>The new data source will be set on the <code>dataSource</code> property of the table view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span>
+    <span class="nv">configureCell</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">ItemIdentifierType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view the data source will populate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configureCell</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that updates the given cell with content for the given item.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cell</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The cell to be configured that the data source dequeued for the item.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>item</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The item whose cell is being configured.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -155,9 +239,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC8editableyACyxq_GXDSbSo07UITableD0C_10Foundation9IndexPathVq_tcF"></a>
                     <a name="//apple_ref/swift/Method/editable(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">editable(_:)</a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC8editableyACyxq_GXDSbSo07UITableD0C_10Foundation9IndexPathVq_tcF">editable(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -165,7 +249,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Enable editing rows in the table view.</p>
+
+<p>Allowing editing is required to support swipe-to-delete or custom swipe actions on the rows.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">editable</span><span class="p">(</span><span class="n">_</span> <span class="nv">canEditRow</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CombinableTableViewDataSource.html#/s:12CombinableUI0A19TableViewDataSourceC15CanEditProvidera">CanEditProvider</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">true</span> <span class="p">})</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>canEditRow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that returns a boolean indicating whether a particular row can be
+edited. If not provided, all rows will be editable.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The data source, to allow continued configuration.</p>
                       </div>
                     </section>
                   </div>
@@ -173,9 +292,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/withSectionTitles(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">withSectionTitles(_:)</a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC6titledyACyxq_GXDSSSgSo07UITableD0C_SixtcF"></a>
+                    <a name="//apple_ref/swift/Method/titled(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC6titledyACyxq_GXDSSSgSo07UITableD0C_SixtcF">titled(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -183,7 +302,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Add section titles to the table view using a closure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">titled</span><span class="p">(</span><span class="n">_</span> <span class="nv">titleProvider</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/CombinableTableViewDataSource.html#/s:12CombinableUI0A19TableViewDataSourceC20SectionTitleProvidera">SectionTitleProvider</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>titleProvider</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that returns a string for the title of the given section.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The data source, to allow continued configuration.</p>
                       </div>
                     </section>
                   </div>
@@ -191,9 +342,60 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC6titledyACyxq_GXDSDyxSSGF"></a>
+                    <a name="//apple_ref/swift/Method/titled(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC6titledyACyxq_GXDSDyxSSGF">titled(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add section titles to the table view using a dictionary.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">titled</span><span class="p">(</span><span class="n">_</span> <span class="nv">titles</span><span class="p">:</span> <span class="p">[</span><span class="kt">SectionIdentifierType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>titles</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The titles for each section, keyed by the <code>SectionIdentifierType</code> for the
+section. Any sections that aren&rsquo;t present in the dictionary will have no title.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The data source, to allow continued configuration.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC15CanEditProvidera"></a>
                     <a name="//apple_ref/swift/Alias/CanEditProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/">CanEditProvider</a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC15CanEditProvidera">CanEditProvider</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -201,7 +403,63 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Closure type for determining whether a row in the table can be edited.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CanEditProvider</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">ItemIdentifierType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view the row is displayed in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index path of the row in the table view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>item</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data source item for the row.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if the row should be allowed to be edited.</p>
                       </div>
                     </section>
                   </div>
@@ -209,9 +467,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC20SectionTitleProvidera"></a>
                     <a name="//apple_ref/swift/Alias/SectionTitleProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/">SectionTitleProvider</a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC20SectionTitleProvidera">SectionTitleProvider</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -219,43 +477,63 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Closure type for providing the title for a section of the table view.</p>
+
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:canEditRowAt:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">tableView(_:canEditRowAt:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SectionTitleProvider</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">SectionIdentifierType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/tableView(_:titleForHeaderInSection:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">tableView(_:titleForHeaderInSection:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view the section is displayed in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the section in the table view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>section</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data source type for the section.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string with the title for the section, or <code>nil</code> if there should be no title for the section.</p>
                       </div>
                     </section>
                   </div>
@@ -267,9 +545,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceCA2A12BindableCellR_rlEyACyxq_GSo07UITableD0Ccfc"></a>
                     <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">init(_:)</a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceCA2A12BindableCellR_rlEyACyxq_GSo07UITableD0Ccfc">init(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -277,7 +555,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Create a new data source for a table view using bindable cells.</p>
+
+<p>If the items in the snapshots conform to <code><a href="../Protocols/BindableCell.html">BindableCell</a></code>, the closure to configure cells for the data
+source can be omitted. Instead, each item will be bound to its cell using the <code><a href="../Protocols/BindableCell.html#/s:12CombinableUI12BindableCellP4bind2toy10Identifier_0D4TypeQZ_tF">BindableCell.bind(to:)</a></code>
+method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tableView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The table view the data source will populate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

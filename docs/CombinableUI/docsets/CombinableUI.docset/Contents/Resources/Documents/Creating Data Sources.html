@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           CombinableUI Docs
         </a>
-         (0% documented)
+         (15% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -119,9 +119,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A19TableViewDataSourceC"></a>
                     <a name="//apple_ref/swift/Class/CombinableTableViewDataSource" class="dashAnchor"></a>
-                    <a class="token" href="#/">CombinableTableViewDataSource</a>
+                    <a class="token" href="#/s:12CombinableUI0A19TableViewDataSourceC">CombinableTableViewDataSource</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -129,8 +129,43 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A diffable data source that supports binding to a publisher of snapshots.</p>
+
+<p>The items in the data source snapshots must conform to <code><a href="Protocols/ReusableCell.html">ReusableCell</a></code> which allows some
+conveniences:</p>
+
+<ul>
+<li>The data source can ask the items which cell identifier they use, and dequeue a cell for them.</li>
+<li>Any NIBs or cell classes used by the items will be registered automatically with the table view.</li>
+</ul>
+
+<p>This data source also supports some features of <code>UITableViewDataSource</code> that the built-in
+<code>UITableViewDiffableDataSource</code> doesn&rsquo;t:</p>
+<li>Indicating which rows can be edited. See <code>editable(_:)</code>.</li>
+<li><p>Providing titles for the sections in the table view. See <code>titled(_:)</code>.</p></li>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="Protocols/DiffableSnapshotApplying.html">DiffableSnapshotApplying</a></code>, which provides methods to bind a publisher
+of snapshots to the data source.</p>
+
+</div>
+
                         <a href="Classes/CombinableTableViewDataSource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CombinableTableViewDataSource</span><span class="o">&lt;</span>
+    <span class="kt">SectionIdentifierType</span><span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span>
+    <span class="kt">ItemIdentifierType</span><span class="p">:</span> <span class="kt"><a href="Protocols/ReusableCell.html">ReusableCell</a></span>
+<span class="o">&gt;</span><span class="p">:</span> <span class="kt">UITableViewDiffableDataSource</span><span class="o">&lt;</span>
+    <span class="kt">SectionIdentifierType</span><span class="p">,</span>
+    <span class="kt">ItemIdentifierType</span>
+<span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="Protocols/DiffableSnapshotApplying.html">DiffableSnapshotApplying</a></span>
+<span class="k">where</span> <span class="kt">ItemIdentifierType</span><span class="o">.</span><span class="kt">Identifier</span><span class="o">.</span><span class="kt">CellType</span> <span class="o">==</span> <span class="kt">UITableViewCell</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -142,9 +177,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:12CombinableUI0A24CollectionViewDataSourceC"></a>
                     <a name="//apple_ref/swift/Class/CombinableCollectionViewDataSource" class="dashAnchor"></a>
-                    <a class="token" href="#/">CombinableCollectionViewDataSource</a>
+                    <a class="token" href="#/s:12CombinableUI0A24CollectionViewDataSourceC">CombinableCollectionViewDataSource</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -152,8 +187,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Undocumented</p>
+
                         <a href="Classes/CombinableCollectionViewDataSource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CombinableCollectionViewDataSource</span><span class="o">&lt;</span>
+    <span class="kt">SectionIdentifierType</span><span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span>
+    <span class="kt">ItemIdentifierType</span><span class="p">:</span> <span class="kt"><a href="Protocols/ReusableCell.html">ReusableCell</a></span>
+<span class="o">&gt;</span><span class="p">:</span> <span class="kt">UICollectionViewDiffableDataSource</span><span class="o">&lt;</span>
+    <span class="kt">SectionIdentifierType</span><span class="p">,</span>
+    <span class="kt">ItemIdentifierType</span>
+<span class="o">&gt;</span><span class="p">,</span> <span class="kt"><a href="Protocols/DiffableSnapshotApplying.html">DiffableSnapshotApplying</a></span>
+<span class="k">where</span> <span class="kt">ItemIdentifierType</span><span class="o">.</span><span class="kt">Identifier</span><span class="o">.</span><span class="kt">CellType</span> <span class="o">==</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

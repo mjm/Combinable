@@ -15,6 +15,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/CollectionViewCell.swift",
+      "line": 6,
+      "symbol": "CombinableCollectionViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/CollectionViewCell.swift",
+      "line": 7,
+      "symbol": "CombinableCollectionViewCell.cancellables",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/CollectionViewCell.swift",
+      "line": 9,
+      "symbol": "CombinableCollectionViewCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/DiffableSnapshotApplying.swift",
       "line": 11,
       "symbol": "DiffableSnapshotApplying",
@@ -82,6 +103,20 @@
       "line": 64,
       "symbol": "DiffableSnapshotApplying.bound(to:animate:on:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell+UIKit.swift",
+      "line": 38,
+      "symbol": "UITableViewCell.View",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/ReusableCell+UIKit.swift",
+      "line": 46,
+      "symbol": "UICollectionViewCell.View",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
@@ -208,6 +243,111 @@
       "line": 37,
       "symbol": "Cell.View",
       "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/TableViewCell.swift",
+      "line": 6,
+      "symbol": "CombinableTableViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/TableViewCell.swift",
+      "line": 10,
+      "symbol": "CombinableTableViewCell.cancellables",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/TableViewCell.swift",
+      "line": 12,
+      "symbol": "CombinableTableViewCell.selectedOrHighlighted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/TableViewCell.swift",
+      "line": 18,
+      "symbol": "CombinableTableViewCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/TableViewCell.swift",
+      "line": 23,
+      "symbol": "CombinableTableViewCell.setHighlighted(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/TableViewCell.swift",
+      "line": 28,
+      "symbol": "CombinableTableViewCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 6,
+      "symbol": "CombinableCollectionViewDataSource",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 14,
+      "symbol": "CombinableCollectionViewDataSource.cancellables",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 16,
+      "symbol": "CombinableCollectionViewDataSource.init(_:configureCell:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 30,
+      "symbol": "CombinableCollectionViewDataSource.SupplementaryViewProviderWithType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 34,
+      "symbol": "CombinableCollectionViewDataSource.withSupplementaryViews(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 49,
+      "symbol": "CombinableCollectionViewDataSource",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UICollectionViewDataSource.swift",
+      "line": 50,
+      "symbol": "CombinableCollectionViewDataSource.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UITableViewDataSource.swift",
+      "line": 106,
+      "symbol": "CombinableTableViewDataSource.SectionTitleProvider",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/matt/Projects/Combinable/Sources/CombinableUI/UITableViewDataSource.swift",
+      "line": 128,
+      "symbol": "CombinableTableViewDataSource.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
