@@ -96,8 +96,6 @@ public struct WithLatestFrom<A: Publisher, B: Publisher>: Publisher where A.Fail
             }
 
             queued.removeAll()
-
-            upstreamSubscription?.request(newDemand)
         }
     }
 }
