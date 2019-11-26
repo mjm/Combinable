@@ -2,21 +2,14 @@
   "warnings": [
     {
       "file": "/Users/matt/Projects/Combinable/Sources/Combinable/WithLatestFrom.swift",
-      "line": 4,
-      "symbol": "Publisher.withLatestFrom(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/matt/Projects/Combinable/Sources/Combinable/WithLatestFrom.swift",
-      "line": 11,
+      "line": 24,
       "symbol": "WithLatestFrom",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/matt/Projects/Combinable/Sources/Combinable/WithLatestFrom.swift",
-      "line": 18,
+      "line": 31,
       "symbol": "WithLatestFrom.init(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

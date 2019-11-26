@@ -1,6 +1,19 @@
 import Combine
 
 public extension Publisher {
+    /// Publishes the values from this publisher combined with whatever the latest value
+    /// from `other` was at the time.
+    ///
+    /// The publisher will complete when either upstream publisher fails, or when this
+    /// publisher finishes successfully. If `other` finishes successfully, the returned
+    /// publisher will continue using that most recent value from `other` for new events.
+    ///
+    /// - Parameters:
+    ///    - other: Another publisher whose latest values should accompany events
+    ///    from this publisher.
+    ///
+    /// - Returns: A new publisher of pairs of values from `self` and `other`.
+    ///
     func withLatestFrom<P: Publisher>(
         _ other: P
     ) -> WithLatestFrom<Self, P> where Failure == P.Failure {
@@ -8,6 +21,7 @@ public extension Publisher {
     }
 }
 
+/// A publisher that combines values from one publisher with the latest value from another.
 public struct WithLatestFrom<A: Publisher, B: Publisher>: Publisher where A.Failure == B.Failure {
     public typealias Output = (A.Output, B.Output)
     public typealias Failure = A.Failure
